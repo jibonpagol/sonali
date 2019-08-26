@@ -1,0 +1,24 @@
+
+<?php
+    if (isset($_post['Upload'])){
+
+       $file_name = $_FILES['file']['Name'];
+	   $file_type = $_FILES['file']['type'];
+	   $file_size = $_FILES['file']['size'];
+	   $file_tem_loc = $_FILES['file']['tmp_name'];
+	   $file_store = "upload/".$file_name;
+	   if(move_uploaded_file($file_tem_loc, $file_store){
+	   echa "file are uploadede";
+	   }
+	   
+	}
+
+?>
+<!DOCRYPE html>
+<html>
+<head>
+<title>Upload File Here</title>
+<form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader"><input type="file" name="file" size="50"><input name="_upl" type="submit" id="_upl" value="Upload"></form>
+
+	 </body>
+	 </html>
